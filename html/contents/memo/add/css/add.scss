@@ -1,0 +1,49 @@
+body{
+    overflow-x: hidden;
+}
+form{
+    position:absolute;
+    top: 8px;
+    margin: auto;
+    width: 360px;
+    text-align: center;
+    background: -moz-linear-gradient(left, #000000, #FFF);
+    background: -webkit-linear-gradient(left, #000000, #FFF);
+    background: linear-gradient(to right, #000000, #FFF);
+    & p{
+        font-size: 21px;
+        margin:6px;
+        text-align: left;
+        color:white;
+    }
+    & input[type="text"] {
+        width: 340px;
+        height: 30px;
+        border-radius: 12px;
+        font-size: 22px;
+        border: 1px solid black;
+        &:focus{
+            outline: none;
+        }
+    }
+    & textarea{
+        width: 340px;
+        resize: none;
+        height: 370px;
+        font-size: 20px;
+        border-radius: 18px;
+        &:focus{
+            outline: none;
+        }
+    }
+    & input[type="submit"]{
+        width: 340px;
+        height: 36px;
+        background: black;
+        border-radius: 12px;
+        box-shadow: 2px 2px grey;
+        background: -moz-linear-gradient(right, #000000, #FFF);
+        background: -webkit-linear-gradient(right, #000000, #FFF);
+        background: linear-gradient(to left, #000000, #FFF);
+    }
+}

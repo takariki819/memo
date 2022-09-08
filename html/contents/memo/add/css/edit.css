@@ -1,0 +1,151 @@
+@charset "UTF-8";
+form {
+  width: 360px;
+}
+form input[type=text] {
+  width: 360px;
+  border-radius: 12px;
+  border: 1px solid black;
+  height: 28px;
+  font-size: 22px;
+  /* はみ出し防止 */
+  box-sizing: border-box;
+}
+
+.data_list {
+  height: 480px;
+  overflow: scroll;
+}
+.data_list::-webkit-scrollbar {
+  display: none;
+}
+.data_list ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  justify-content: space-between;
+}
+.data_list ul li {
+  transition: 1s;
+  width: 168px;
+  border: 1px solid black;
+  padding: 3px;
+  border-radius: 14px;
+  margin-top: 8px;
+}
+.data_list ul li div:first-child {
+  position: relative;
+  display: flex;
+  font-size: 18px;
+  height: 25px;
+}
+.data_list ul li div:first-child span:first-child {
+  overflow: scroll;
+  font-size: 18px;
+}
+.data_list ul li div:first-child span:first-child::-webkit-scrollbar {
+  display: none;
+}
+.data_list ul li div:first-child input[type=checkbox] {
+  display: none;
+}
+.data_list ul li div:first-child input[type=checkbox] + label {
+  margin-right: 11px;
+  margin-left: auto;
+  position: relative;
+}
+.data_list ul li div:first-child input[type=checkbox] + label::after {
+  content: "☆";
+  position: relative;
+  bottom: 8px;
+  display: block;
+  font-size: 30px;
+}
+.data_list ul li div:first-child input[type=checkbox]:checked + label::after {
+  content: "★";
+}
+.data_list ul li div:first-child span:last-child {
+  font-size: 34px;
+  position: relative;
+  bottom: 13px;
+}
+.data_list ul li div:last-child .comment {
+  display: block;
+  width: 170px;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+.data_list ul li div:last-child .comment::-webkit-scrollbar {
+  display: none;
+}
+
+.focus {
+  position: absolute;
+  transform: scale(2);
+  top: 155px;
+  left: 98px;
+  z-index: 1;
+  background: white;
+}
+.focus div:first-child {
+  border-bottom: 3px solid rgba(0, 0, 0, 0.3490196078);
+}
+.focus div:first-child input[type=text] {
+  width: 60%;
+  border: none;
+  height: 21px;
+  padding: 0 0 0 4px;
+  border-radius: 12px;
+}
+.focus div:first-child input[type=text]:focus {
+  outline: none;
+}
+.focus div:last-child {
+  position: relative;
+  display: block;
+  margin-top: 5px;
+}
+.focus div:last-child span:last-child {
+  position: absolute;
+  top: 0;
+  background: gray;
+  opacity: 0.4;
+  border-radius: 8px;
+  padding: 0 8px;
+  right: 2px;
+}
+.focus div:last-child textarea {
+  box-sizing: border-box;
+  white-space: pre-wrap;
+  width: 100%;
+  height: 191px;
+  resize: none;
+  border: none;
+}
+.focus div:last-child textarea:focus {
+  outline: none;
+}
+.focus div:last-child .save {
+  position: absolute;
+  top: 0;
+  right: 32px;
+  opacity: 0.3;
+}
+
+.disNone {
+  display: none;
+}
+
+dialog {
+  position: absolute;
+  top: 115px;
+  border-radius: 32px;
+  padding: 8px;
+  color: red;
+}
+
+.search_color {
+  background-color: rgba(237, 253, 0, 0.33);
+}
+/*# sourceMappingURL=edit.css.map */

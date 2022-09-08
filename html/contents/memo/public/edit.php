@@ -1,0 +1,56 @@
+<?php 
+require("../../data/memo_data.php");
+$data=new Data();
+$data->memo();
+$list=$data->get_favorite_data();
+$label_count=1;
+if(!isset($_SESSION["token"])){
+    echo "<a href=../../index.php>
+    <font size='45px'>loginしてください</font>
+    </a>";
+    exit;
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../add/css/edit.css">
+    <title>edit</title>
+</head>
+<body>
+    <header>
+        <form>
+            <input type="text">
+            <input type="submit" value="" style="display:none">
+        </form>
+    </header>
+    <main>
+        <section class="data_list">
+            <ul>
+                <?php foreach($list as $data): ?>
+                    <li data-id=<?= $data["id"]; ?>>
+                        <div class="focus_div">
+                            <span class="title"><?= $data["title"]; ?></span>
+                            <input 
+                            type="checkbox" id=<?="check".$label_count;?>  checked>
+                            <label for=<?="check".$label_count;?>>
+                            </label>
+                            <span class="del">x</span>
+                        </div>
+                        <div class="disNone">
+                            <span class="comment"><?= $data["comment"]; ?></span>
+                            <span class="edit">編集</span>
+                        </div>
+                    </li>
+                    <?php $label_count++; ?>
+                <?php endforeach; ?>
+            </ul>
+        </section>
+    </main>
+    <script src="../add/search.js"></script>
+    <script src="../add/option.js"></script>
+</body>
+</html>

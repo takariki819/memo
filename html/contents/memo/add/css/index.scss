@@ -1,0 +1,251 @@
+body{
+    touch-action:pan-y;
+    overflow-y:hidden ;
+}
+header{
+    transition:background-color 1.5s;
+    background-color: black;
+    display: flex;
+    padding: 12px;
+    & button{
+        position: relative;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        width: 224px;
+        height: 29px;
+        display: block;
+        background-color: transparent;
+        & span:nth-child(-n+3){
+            transition:1s;
+            display:block;
+            width:32px;
+            height:2px;
+            margin-top:9px;
+            background-color: white;
+        }
+        & ul{
+            display:flex;
+            position:absolute;
+            top:0;
+            list-style:none;
+            padding:0;
+            margin:0;
+            width:0px;
+            height:36px;
+            background-color: transparent;
+            transition:1s;
+            & li {
+                color:transparent;
+            }
+        }
+        &:hover{
+            & span:nth-child(-n+3){
+                transform: scaleX(0);
+            }
+            & ul{
+                border-radius:12px;
+                width:224px;
+                background-color: white;
+                & li{
+                    color:black;
+                    margin-left:40px;
+                    line-height:36px;
+                    font-size:16px;
+                    &:first-child{
+                        margin-left:24px;
+                    }
+                }
+            }
+        }
+    }
+    & #login{
+        color:black;
+        background-color: white;
+        padding: 6px 12px;
+        border-radius: 12px;
+        margin-left: auto;
+    }
+}
+main{
+    transition:background-color 2s;
+    background-color: black;
+    & section:first-child{
+        position: relative;
+        background-image: url(../../../img/gojita.png);
+        background-size: cover;
+        height: 120px;
+        margin-top: 2px;
+        border-radius: 10px;
+        & a{
+            position: absolute;
+            top: 39px;
+            left: 37px;
+            text-decoration: none;
+            color: white;
+            font-size: 32px;
+            font-family: sans-serif;
+        }
+    }
+    & section:last-child{
+        position:relative;
+        height: 360px;
+        & ul{
+            position:relative;
+            padding:0;
+            list-style:none;
+            margin:0;
+            height: 360px;
+            & > li{
+                list-style:none;
+                width: 0;
+                display:inline;
+                & a{
+                    text-decoration:none;
+                    color:black;
+                }
+                &:nth-child(1){
+                    position: absolute;
+                    top: 68px;
+                    left: 81px;
+                    border-right: 3px solid transparent;
+                    border-bottom: 264px solid white;
+                    border-left: 158px solid transparent;
+                    transform: rotate(49deg);
+                }
+                &:nth-child(2){
+                    position: absolute;
+                    top: 25px;
+                    right: 85px;
+                    border-right: 153px solid transparent;
+                    border-top: 264px solid white;
+                    border-left: 3px solid transparent;
+                    transform: rotate(50deg);
+                }
+                &:nth-child(3){
+                    position: absolute;
+                    font-size: 40px;
+                    font-family: cursive;
+                    text-decoration: none;
+                    background-color: white;
+                    top: 80px;
+                    right: 165px;
+                    transform: rotate(334deg);
+                }
+                &:nth-child(4){
+                    position: absolute;
+                    font-size: 40px;
+                    font-family: cursive;
+                    text-decoration: none;
+                    background-color: white;
+                    top: 241px;
+                    left: 94px;
+                    transform: rotate(334deg);
+                }
+            }
+        }
+        & > a{
+            position: absolute;
+            bottom:0;
+            right:6px;
+            text-decoration: none;
+            color:white;
+        }
+    }
+}
+.login_on{
+    background-color: #260404;
+}
+dialog{
+    position: absolute;
+    top: 126px;
+    background: transparent;
+    border: none;
+    & input{
+        height: 36px;
+    border: 6px solid #e7e70e3b;
+    border-radius: 18px;
+    font-size: 38px;
+    width: 90px;
+    text-align: center;
+    &:focus{
+        outline: none;
+    }
+    }
+}
+
+.operation_non{
+    touch-action: none;
+    pointer-events: none;
+    opacity:0.3;
+}
+
+@media screen and (min-width:601px){
+    header{
+        & button{
+            width:1224px;
+            & ul{
+                width:1224px;
+                & li{
+                    margin-left:232px;
+                    &:first-child{
+                        margin: left 120px;
+                    }
+                }
+            }
+            & span:nth-child(-n+3){
+                height:5px;
+            }
+            & span:first-child{
+                margin-top:0;
+            }
+        }
+    }
+    main{
+        & section:first-child{
+            height:500px;
+            & a{
+                font-size: 122px;
+                top: 150px;
+                left: 161px;
+            }
+        }
+        & section:last-child{
+            height: 453px;
+            & ul{
+                height: 500px;
+                & li{
+                    &:nth-child(1){
+                        top: -127px;
+                        left: 304px;
+                        border-right: 50px solid transparent;
+                        border-bottom: 788px solid white;
+                        border-left: 303px solid transparent;
+                        transform: rotate(90deg);
+                    }
+                    &:nth-child(2){
+                        top: -298px;
+                        right: 662px;
+                        border-right: 50px solid transparent;
+                        border-bottom: 788px solid white;
+                        border-left: 303px solid transparent;
+                        transform: rotate(270deg);
+                    }
+                    &:nth-child(3){
+                        font-size: 97px;
+                        top: 49px;
+                        left: 748px;
+                        transform: rotate(26deg);
+                    }
+                    &:nth-child(4){
+                        font-size: 97px;
+                        top: 171px;
+                        left: 202px;
+                        transform: rotate(32deg);
+                    }
+                }
+            }
+        }
+    }
+
+}
