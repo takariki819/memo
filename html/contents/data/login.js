@@ -82,3 +82,10 @@ async function logout(){
     login.textContent="login";
     login.classList.toggle("logout");
 }
+
+const button=document.querySelector("button");
+button.addEventListener("click",open_menu);
+
+function open_menu(){
+    this.classList.toggle("open_menu");
+}

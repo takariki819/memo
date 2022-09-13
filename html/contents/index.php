@@ -27,7 +27,7 @@ $login->log();
     </header>
     <main>
         <section>
-            <a href="#"><div>training</div></a>
+            <a href="training/public/training.php"><div>training</div></a>
         </section>
         <section>
             <ul>
@@ -39,6 +39,7 @@ $login->log();
             <a href="../index.html"><span>TopPage</span></a>
         </section>
     </main>
+    <script src="data/rule.js"></script>
     <script src="data/login.js"></script>
 </body>
 </html>

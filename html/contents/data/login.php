@@ -1,9 +1,13 @@
 <?php 
+date_default_timezone_set('Asia/Tokyo');
 session_start();
-$_SESSION["db"]="mysql:dbname=test;host=9bafdaf1897e;";
+$_SESSION["db"]="mysql:dbname=test;host=07a28216ebcc;";
 $_SESSION["user"]="test";
 $_SESSION["pw"]="test";
 
+/* $_SESSION["db"]="mysql:dbname=makun6250_quiz;host=mysql1.php.xdomain.ne.jp;";
+$_SESSION["user"]="makun6250_php";
+$_SESSION["pw"]="taka6250"; */
 class Login{
     private $pdo;
     function __construct(){

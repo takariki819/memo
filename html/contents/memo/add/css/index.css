@@ -1,4 +1,5 @@
 body {
+  margin: 0;
   touch-action: pan-y;
   overflow-y: hidden;
 }
@@ -7,7 +8,7 @@ header {
   transition: background-color 1.5s;
   background-color: black;
   display: flex;
-  padding: 12px;
+  padding: 10px;
 }
 header button {
   position: relative;
@@ -18,13 +19,16 @@ header button {
   height: 29px;
   display: block;
   background-color: transparent;
+  height: 36px;
 }
 header button span:nth-child(-n+3) {
+  position: relative;
+  z-index: 1;
   transition: 1s;
   display: block;
   width: 32px;
   height: 2px;
-  margin-top: 9px;
+  margin-top: 8px;
   background-color: white;
 }
 header button ul {
@@ -42,29 +46,40 @@ header button ul {
 header button ul li {
   color: transparent;
 }
-header button:hover span:nth-child(-n+3) {
-  transform: scaleX(0);
-}
-header button:hover ul {
-  border-radius: 12px;
-  width: 224px;
-  background-color: white;
-}
-header button:hover ul li {
-  color: black;
-  margin-left: 40px;
-  line-height: 36px;
-  font-size: 16px;
-}
-header button:hover ul li:first-child {
-  margin-left: 24px;
-}
 header #login {
   color: black;
   background-color: white;
   padding: 6px 12px;
   border-radius: 12px;
   margin-left: auto;
+}
+
+.open_menu span:nth-child(-n+3) {
+  background-color: black;
+  height: 3px;
+}
+.open_menu span:nth-child(-n+3):first-child {
+  transform: rotate(45deg) translate(8px, 7px);
+}
+.open_menu span:nth-child(-n+3):nth-child(2) {
+  transform: scaleX(0);
+}
+.open_menu span:nth-child(-n+3):nth-child(3) {
+  transform: rotate(-45deg) translate(8px, -8px);
+}
+.open_menu ul {
+  border-radius: 12px;
+  width: 274px;
+  background-color: white;
+}
+.open_menu ul li {
+  color: black;
+  margin-left: 40px;
+  line-height: 36px;
+  font-size: 16px;
+}
+.open_menu ul li:first-child {
+  margin-left: 63px;
 }
 
 main {

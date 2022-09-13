@@ -27,6 +27,7 @@ if(!isset($_SESSION["token"])){
         <input type="submit" value="">
     </form>
 
+    <script src="../../data/rule.js"></script>
     <script src="../add/add.js"></script>
 </body>
 </html>
