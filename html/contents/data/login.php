@@ -1,7 +1,7 @@
 <?php 
 date_default_timezone_set('Asia/Tokyo');
 session_start();
-$_SESSION["db"]="mysql:dbname=test;host=07a28216ebcc;";
+$_SESSION["db"]="mysql:dbname=test;host=8333f6d4918a;";
 $_SESSION["user"]="test";
 $_SESSION["pw"]="test";
 

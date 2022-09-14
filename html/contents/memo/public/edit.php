@@ -28,27 +28,25 @@ if(!isset($_SESSION["token"])){
         </form>
     </header>
     <main>
-        <section class="data_list">
-            <ul>
-                <?php foreach($list as $data): ?>
-                    <li data-id=<?= $data["id"]; ?>>
-                        <div class="focus_div">
-                            <span class="title"><?= $data["title"]; ?></span>
-                            <input 
-                            type="checkbox" id=<?="check".$label_count;?>  checked>
-                            <label for=<?="check".$label_count;?>>
-                            </label>
-                            <span class="del">x</span>
-                        </div>
-                        <div class="disNone">
-                            <span class="comment"><?= $data["comment"]; ?></span>
-                            <span class="edit">編集</span>
-                        </div>
-                    </li>
-                    <?php $label_count++; ?>
-                <?php endforeach; ?>
-            </ul>
-        </section>
+        <ul>
+            <?php foreach($list as $data): ?>
+                <li data-id=<?= $data["id"]; ?>>
+                    <div class="focus_div">
+                        <span class="title"><?= $data["title"]; ?></span>
+                        <input 
+                        type="checkbox" id=<?="check".$label_count;?>  checked>
+                        <label for=<?="check".$label_count;?>>
+                        </label>
+                        <span class="del">x</span>
+                    </div>
+                    <div class="disNone">
+                        <span class="comment"><?= $data["comment"]; ?></span>
+                        <span class="edit">編集</span>
+                    </div>
+                </li>
+                <?php $label_count++; ?>
+            <?php endforeach; ?>
+        </ul>
     </main>
     <script src="../add/search.js"></script>
     <script src="../add/option.js"></script>

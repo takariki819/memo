@@ -61,8 +61,8 @@ function register_form_create(){
     const form=document.createElement("form");
     const input=document.createElement("input");
     input.type="text";
-    input.maxLength=10;
-    input.minLength=1;
+    input.maxLength=8;
+    input.minLength=2;
     input.pattern="[a-z]{1,10}";
     form.appendChild(input);
     register.appendChild(form);

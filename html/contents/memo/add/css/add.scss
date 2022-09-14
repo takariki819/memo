@@ -1,23 +1,21 @@
 body{
-    overflow-x: hidden;
+    margin:0;
 }
 form{
     position:absolute;
     top: 8px;
-    margin: auto;
-    width: 360px;
     text-align: center;
     background: -moz-linear-gradient(left, #000000, #FFF);
     background: -webkit-linear-gradient(left, #000000, #FFF);
     background: linear-gradient(to right, #000000, #FFF);
     & p{
         font-size: 21px;
-        margin:6px;
+        margin:6px 6px 0 6px;
         text-align: left;
         color:white;
     }
     & input[type="text"] {
-        width: 340px;
+        width: 330px;
         height: 30px;
         border-radius: 12px;
         font-size: 22px;
@@ -27,9 +25,9 @@ form{
         }
     }
     & textarea{
-        width: 340px;
+        width: 330px;
         resize: none;
-        height: 370px;
+        height: 360px;
         font-size: 20px;
         border-radius: 18px;
         &:focus{
@@ -37,7 +35,7 @@ form{
         }
     }
     & input[type="submit"]{
-        width: 340px;
+        width: 330px;
         height: 36px;
         background: black;
         border-radius: 12px;
