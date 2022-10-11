@@ -1,15 +1,15 @@
-body {
+* {
   margin: 0;
+  padding: 0;
 }
 
-#back_img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 600px;
-  -o-object-fit: cover;
-     object-fit: cover;
+body {
+  background-image: url("../../img/goku.png");
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 header {
@@ -147,7 +147,6 @@ main table tr .max {
 @-webkit-keyframes menu_color {
   0% {
     color: white;
-    font-size: 31px;
   }
   100% {
     color: gold;
@@ -158,7 +157,6 @@ main table tr .max {
 @keyframes menu_color {
   0% {
     color: white;
-    font-size: 31px;
   }
   100% {
     color: gold;

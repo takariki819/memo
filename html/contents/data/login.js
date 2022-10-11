@@ -88,4 +88,6 @@ button.addEventListener("click",open_menu);
 
 function open_menu(){
     this.classList.toggle("open_menu");
+    const ul=document.querySelector("ul");
+    ul.classList.toggle("open_ul");
 }

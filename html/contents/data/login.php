@@ -1,13 +1,7 @@
 <?php 
 date_default_timezone_set('Asia/Tokyo');
 session_start();
-$_SESSION["db"]="mysql:dbname=test;host=8333f6d4918a;";
-$_SESSION["user"]="test";
-$_SESSION["pw"]="test";
-
-/* $_SESSION["db"]="mysql:dbname=makun6250_quiz;host=mysql1.php.xdomain.ne.jp;";
-$_SESSION["user"]="makun6250_php";
-$_SESSION["pw"]="taka6250"; */
+require("pw.php");
 class Login{
     private $pdo;
     function __construct(){
@@ -54,6 +48,17 @@ class Login{
     }
     public function getPdo(){
         return $this->pdo;
+    }
+}
+
+class token_set{
+    function __construct(){
+        if(!isset($_SESSION["token"])){
+            echo "<a href=../../index.php>
+            <font size='45px'>loginしてください</font>
+            </a>";
+            exit;
+        }
     }
 }
 ?>

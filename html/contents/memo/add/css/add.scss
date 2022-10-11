@@ -45,3 +45,13 @@ form{
         background: linear-gradient(to left, #000000, #FFF);
     }
 }
+
+@media screen and (min-width:601px){
+    body{
+        width:650px;
+    }
+    form{
+        width:610px;
+        margin:auto;
+    }
+}

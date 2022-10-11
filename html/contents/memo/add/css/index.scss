@@ -4,43 +4,65 @@ body{
     overflow-y:hidden ;
 }
 header{
+    position: relative;
     transition:background-color 1.5s;
     background-color: black;
     display: flex;
-    padding: 10px;
+    padding: 10px 6px;
     & button{
         position: relative;
         background-color: transparent;
         border: none;
         padding: 0;
-        width: 224px;
         height: 29px;
         display: block;
         background-color: transparent;
         height: 36px;
-        & span:nth-child(-n+3){
-            position: relative;
-            z-index: 1;
-            transition:1s;
-            display:block;
-            width:32px;
-            height:2px;
-            margin-top:8px;
-            background-color: white;
+        cursor: pointer;
+        & span{
+            &:nth-child(-n+3){
+                position: relative;
+                z-index: 1;
+                transition:1s;
+                display:block;
+                width:32px;
+                height:2px;
+                margin-top:8px;
+                background-color: white;
+            }
+            &:first-child{
+                margin-top: 3px;
+            }
         }
-        & ul{
-            display:flex;
-            position:absolute;
-            top:0;
-            list-style:none;
-            padding:0;
-            margin:0;
-            width:0px;
+    }
+    & ul{
+        opacity: 0;
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        height: 36px;
+        color: black;
+        background: transparent;
+        transition: 1s;
+        text-align: center;
+        width: 0;
+        overflow: hidden;
+        & li {
+            margin: auto;
             height:36px;
-            background-color: transparent;
-            transition:1s;
-            & li {
-                color:transparent;
+            line-height: 36px;
+            text-align: center;
+            cursor: pointer;
+            transform: translateX(-100%);
+            &:nth-child(1){
+                transition: 2.4s;
+            }
+            &:nth-child(2){
+                transition: 2.2s;
+            }
+            &:nth-child(3){
+                transition: 2s;
             }
         }
     }
@@ -52,33 +74,27 @@ header{
         margin-left: auto;
     }
 }
+
 .open_menu{
     & span:nth-child(-n+3){
-        background-color: black;
         height: 3px;
         &:first-child{
-            transform: rotate(45deg) translate(8px, 7px);
+            transform: rotate(45deg) translate(3px, 12px);
         }
         &:nth-child(2){
             transform: scaleX(0);
         }
         &:nth-child(3){
-            transform: rotate(-45deg) translate(8px, -8px);
+            transform: rotate(-45deg) translate(3px, -13px);
         }
     }
-    & ul{
-        border-radius:12px;
-        width:274px;
-        background-color: white;
-        & li{
-            color:black;
-            margin-left:40px;
-            line-height:36px;
-            font-size:16px;
-            &:first-child{
-                margin-left:63px;
-            }
-        }
+}
+.open_ul{
+    background-color: white;
+    opacity:1;
+    width:80%;
+    & li{
+        transform: translateX(0);
     }
 }
 
@@ -86,77 +102,65 @@ header{
 main{
     transition:background-color 2s;
     background-color: black;
+    height:83vh;
     & section:first-child{
-        position: relative;
-        background-image: url(../../../img/gojita.png);
-        background-size: cover;
-        height: 120px;
-        margin-top: 2px;
-        border-radius: 10px;
+        height: 35%;
         & a{
             position: absolute;
-            top: 39px;
+            top: 19%;
             left: 37px;
             text-decoration: none;
             color: white;
-            font-size: 32px;
+            font-size: 43px;
             font-family: sans-serif;
+            z-index: 1;
+        }
+        & .img{
+            position: relative;
+            background-image: url("../../../img/gojita.png");
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            margin-top: 2px;
+            border-radius: 10px;
         }
     }
     & section:last-child{
         position:relative;
-        height: 360px;
+        height: 65%;
         & ul{
             position:relative;
             padding:0;
             list-style:none;
             margin:0;
-            height: 360px;
+            height: 100%;
             & > li{
-                list-style:none;
-                width: 0;
-                display:inline;
+                position: absolute;
+                text-align: right;
+                letter-spacing: 0.3em;
+                width: 80%;
+                font-family: cursive;
+                font-size: 40px;
+                background: linear-gradient(10deg, black, #fffcfc);
+                border-radius: 0 20px 20px 0;
+                padding-right: 8px;
+                height: 16%;
                 & a{
                     text-decoration:none;
                     color:black;
                 }
                 &:nth-child(1){
-                    position: absolute;
-                    top: 68px;
-                    left: 81px;
-                    border-right: 3px solid transparent;
-                    border-bottom: 264px solid white;
-                    border-left: 158px solid transparent;
-                    transform: rotate(49deg);
+                    top: 2%;
+                    left: 10%;
+                    background: transparent;
+                    color: white;
+                    text-align: center;
                 }
                 &:nth-child(2){
-                    position: absolute;
-                    top: 25px;
-                    right: 85px;
-                    border-right: 153px solid transparent;
-                    border-top: 264px solid white;
-                    border-left: 3px solid transparent;
-                    transform: rotate(50deg);
+                    top: 25%;
                 }
                 &:nth-child(3){
-                    position: absolute;
-                    font-size: 40px;
-                    font-family: cursive;
-                    text-decoration: none;
-                    background-color: white;
-                    top: 80px;
-                    right: 165px;
-                    transform: rotate(334deg);
-                }
-                &:nth-child(4){
-                    position: absolute;
-                    font-size: 40px;
-                    font-family: cursive;
-                    text-decoration: none;
-                    background-color: white;
-                    top: 241px;
-                    left: 94px;
-                    transform: rotate(334deg);
+                    top:53%;
                 }
             }
         }

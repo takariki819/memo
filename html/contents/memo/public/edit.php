@@ -4,12 +4,7 @@ $data=new Data();
 $data->memo();
 $list=$data->get_favorite_data();
 $label_count=1;
-if(!isset($_SESSION["token"])){
-    echo "<a href=../../index.php>
-    <font size='45px'>loginしてください</font>
-    </a>";
-    exit;
-}
+new token_set();
 ?>
 <!DOCTYPE html>
 <html lang="en">

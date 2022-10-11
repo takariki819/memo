@@ -27,6 +27,10 @@ class Data extends Login{
                 case "save":
                     $this->save();
                     break;
+                case "get_task":
+                    $list=$this->get_task();
+                    echo json_encode($list);
+                    break;
             }
             exit;
         }
@@ -65,6 +69,10 @@ class Data extends Login{
     }
     public function get_favorite_data(){
         $stmt=$this->pdo->query("SELECT * FROM memo WHERE favorite=1");
+        return $stmt->fetchAll();
+    }
+    public function get_task(){
+        $stmt=$this->pdo->query("SELECT * FROM memo ORDER BY RAND() LIMIT 10");
         return $stmt->fetchAll();
     }
 }

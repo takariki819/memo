@@ -17,29 +17,32 @@ $login->log();
             <span></span>
             <span></span>
             <span></span>
-            <ul>
-                <li id="del">del</li>
-                <li id="task">task</li>
-                <li id="favorite">favorite</li>
-            </ul>
         </button>
+        <ul>
+            <li id="yesterday_training_data">昨日の記録</li>
+            <li id="killing_time">
+                <a href="memo/public/quiz.php">暇つぶし</a>
+            </li>
+            <li id="task">
+                <a href="memo/public/task.php">タスク</a>
+            </li>
+        </ul>
         <span id="login">login</span>
     </header>
     <main>
         <section>
             <a href="training/public/training.php"><div>training</div></a>
+            <div class="img"></div>
         </section>
         <section>
             <ul>
-                <li></li>
-                <li></li>
+                <li>MEMO</li>
                 <li id="add"><a href="memo/public/add.php">add</a></li>
                 <li id="edit"><a href="memo/public/edit.php">edit</a></li>
             </ul>
             <a href="../index.html"><span>TopPage</span></a>
         </section>
     </main>
-    <script src="data/rule.js"></script>
     <script src="data/login.js"></script>
 </body>
 </html>

@@ -2,12 +2,7 @@
 require("../../data/memo_data.php");
 $data=new Data();
 $data->memo();
-if(!isset($_SESSION["token"])){
-    echo "<a href=../../index.php>
-    <font size='45px'>loginしてください</font>
-    </a>";
-    exit;
-}
+new token_set();
 ?>
 <!DOCTYPE html>
 <html lang="ja">

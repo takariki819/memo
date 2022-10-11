@@ -1,14 +1,14 @@
-body{
+*{
     margin:0;
-    
+    padding:0;
 }
-#back_img{
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 100%;
-    height: 600px;
-    object-fit: cover;
+body{
+    background-image: url("../../img/goku.png");
+    width:100vw;
+    height:100vh;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 header{
     width:360px;
@@ -79,6 +79,7 @@ main{
                     text-align: right;
                     animation-name:menu_color;
                     animation-duration: 4s;
+                    animation-delay: 2s;
                     animation-fill-mode: forwards;
                     animation-iteration-count: infinite;
                 }
@@ -146,7 +147,6 @@ main{
 @keyframes menu_color{
     0%{
         color:white;
-        font-size: 31px;
     }
     100%{
         color:gold;

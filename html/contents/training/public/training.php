@@ -2,12 +2,7 @@
 require("../../data/training_data.php");
 $tr=new Training();
 $tr->training();
-if(!isset($_SESSION["token"])){
-    echo "<a href=../../index.php>
-    <font size='45px'>loginしてください</font>
-    </a>";
-    exit;
-}
+new token_set();
 $training_menu=$tr->get_training_column();
 array_shift($training_menu);
 array_pop($training_menu);
@@ -38,8 +33,6 @@ array_pop($training_menu);
             <button>register</button>
         </ul>
     </main>
-    <img src="../../img/goku.png" id="back_img"></img>
-    <script src="../../data/rule.js"></script>
     <script src="../add/index.js"></script>
     <script src="../add/history.js"></script>
 </body>

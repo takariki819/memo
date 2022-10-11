@@ -23,15 +23,16 @@ async function insert(){
         return;
     }
     menu.forEach(v =>{
-        const count=v.parentNode.children[1].children[0].value;
+        const count=v.parentNode.children[1].children[0];
         if(count === ""){
             alert("数値を入力してください");
             return;
         }
-        data.append(v.textContent,count);
+        data.append(v.textContent,count.value);
+        count.value="";
     })
     const res=await (await fetch("?action=register_count",{method:"POST",body:data})).json();
-    console.log(res);
+    res.length > 0 ?alert("登録完了"):alert("トラブルにより登録できませんでした");
 }
 
 //delete処理
